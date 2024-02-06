@@ -1,16 +1,21 @@
-#! /bin/bash
+#!/bin/bash
 
-read -p "Enter a file or directory path: " input
+echo "Passed arguments: $@"
+echo "Total passing arguments: $#"
 
-if [ -x "$input" ]; then
-    echo "The input '$input' is an executable."
+for context in "$@";do
 
-elif [ -f "$input" ]; then
-    echo "The input '$input' is a file."
+    if [ -d "$context" ]; then
+        echo "The input '$context' is a directory."
 
-elif [ -d "$input" ]; then
-    echo "The input '$input' is a directory."
+    elif [ -x "$context" ]; then
+        echo "The input '$context' is an executable."
 
-else
-    echo "The input '$input' is neither a file nor a directory."
-fi
+    elif [ -f "$context" ]; then
+        echo "The input '$context' is a file."
+
+    else
+        echo "The input '$context' is neither an executable, file, nor directory."
+    fi
+    
+done
