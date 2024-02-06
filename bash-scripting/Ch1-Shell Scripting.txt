@@ -1,0 +1,83 @@
+Shell Scripting:
+Scripts:
+-contain a series of commands
+-an interpreter executes commands in the script
+-here the shell acts as an interpreter
+-it's going sequentially
+
+Variables:
+VARIABLE_NAME="Value"
+$VARIABLE_NAME
+${VARIABLE_NAME}
+VARIABLE_NAME=$(command)
+
+File operators(tests):
+-d	--	if file is dir
+-e	--	if file exists
+-f	--	exists & regular
+-s	--	exists & not empty 
+-r	--	readable by you
+-w	--	writable by you
+-x	--	executable by you
+
+String Operators(tests):
+-z STRING	--	if string is empty
+-n STRING	--	is not empty
+STR1=STR2	--	if equal
+STR1!=STR2	--	not equal
+
+Arithmetic operators(tests):
+arg1 -eq arg2
+arg1 -ne arg2
+
+arg1 -lt arg2
+arg1 -le arg2
+
+arg1 -gt arg2
+arg1 -ge arg2
+
+if:
+if[condition-is-true]   
+then
+	command 1
+	command 2
+	command N
+fi
+
+if/else:
+if[condition-is-true]   
+then
+	command N
+else
+	command N
+fi
+
+if/elif/else:
+if[condition-is-true]   
+then
+	command N
+elif[condition-is-true]
+then
+	command N
+else
+	command N
+fi
+
+for loop:
+for VARIABLE_NAME in ITEM_1 ITEM_N
+do
+	command1
+	command N
+done
+
+Positional Parameters:
+$ script.sh parameter1 parameter2 parameter3
+    $0          $1         $2         $3
+$@:can access all the positional parameters starting at $1 to the very last one by using this special variable
+
+Acepting User Input(STDIN):
+read command accepts STDIN
+read -p "PROMPT" VARIABLE
+ex: read -p "Enter a user name: " USER
+
+comments start with #.

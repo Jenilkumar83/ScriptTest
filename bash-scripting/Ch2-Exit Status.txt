@@ -1,0 +1,95 @@
+Exit Status:
+Range 0-255
+0=success
+Other than 0 = error condition
+
+Checking the Exit Status:
+$?contains the return code of the previously executed command
+
+&& and ||:
+&&=AND
+||=OR
+
+Semicolon:Separate commands with a semicolon to ensure they all get executed
+
+exit command:
+Explicitely define the return code
+
+Functions:
+Reusable code
+Must be defined before use
+Has parameter support
+
+function fun-name(){}
+fun-name(){}
+
+Calling a function
+Functions can call other functions
+Functions can accept parameters
+First parameter stored in $1.
+
+By defaults, variables are global
+Variables have to be defined before used
+
+fun k bad global var define hoga to vo call nahi hoga
+
+Local Variables:
+Can only be accessed within the function
+Create using the local keyword: localLOCAL_VAR=1
+Only functions can have local variables
+
+functions have an exit status
+0=success
+$?=the exit status
+Functions can be defined anywhere in a script and be used at any time during a shell script.--false
+
+return1 -- will cause a function to return with an exit status of "1".
+
+ls ?	--	file name with single char starts that will display
+ls ??	--	start with two char
+rm ??	--	delete two char files
+
+Wildcards are great when you want to work on a group of files or directories
+
+Case Statements:
+Alternative to if statements
+case "$VAR" in
+	pattern_1)
+		#commands go here.
+		;;
+	pattern_N)
+		#commands go here.
+		;;
+esac
+Wildcards can be used with case statements.
+
+Logging:
+Logs are the who, what, when, where and why.
+o/p may scroll off the screen
+Script may run inattended(via cron, etc.)
+
+Syslog:
+The syslog standard uses facilities and severities to categorize messages.
+-Facilities:kern,user,mail,daemon,auth,local0,local7
+-Severities:emerg,alert,crit,err,warning,notice,info,debug
+
+Log file locations are configurable:
+/var/log/messages
+/var/log/syslog
+
+Logging with logger:
+logger utility
+By default creates user.notice messages
+-t	--	to tag msg
+
+=>While loops:
+Infinite loops:
+while true
+do
+	command N
+	sleep 1
+done
+
+A while loop used in conjunction with a read statements can only read data from a file.--false
+
+The read command supports splitting the data it reads into multiple variables.--True

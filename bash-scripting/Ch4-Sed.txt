@@ -1,0 +1,17 @@
+Data Manipulation and Text Transformation with Sed:-
+
+Sed = Stream editor
+A stream is data that travels from:
+	-one process to another through a pipe
+	-one file to another as a redirect
+	-one device to another
+	
+Std Input = Std Input Stream, etc
+Streams are typically textual data
+
+Sed performs text transformation on streams
+Sed is used programmatically, not interactively
+
+Sed=stream editor for filtering and transforming text
+sed 's/assistant/assistant to the/' manager.txt
+

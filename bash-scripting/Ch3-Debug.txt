@@ -1,0 +1,27 @@
+A bug is really an error
+-x = prints commands as they execute
+After substitutions and expansions
+Called an x-trace, tracing or print debugging
+set-x	--	to stop debugging
+
+-e = exit on error
+can be combined with other options: -ex, -xe, -e-x 
+
+-v = prints the shell input lines as they are read
+help set | less
+
+Can create own debugging code
+Usea a special variable like DEBUG
+	DEBUG=true
+	DEBUG=false
+PS4	--	controls what is displayed before a line when using the "-x" option.
+The default value is "+".
+Bash Variables
+	BASH_SOURCE,LINENO,etc
+DOS vs Linux(Unix)File Types:
+CRLF/Carriage Return, Line Feed
+cat -v script.sh
+
+A software bug is an error in a computer program that causes it to produce an unexpected or incorrect result.
+
+Bash options can only be used one at a time.--false
