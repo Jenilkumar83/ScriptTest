@@ -1,4 +1,5 @@
 #!/bin/bash
+
 read -p "Enter the name of a file or directory: " file_or_directory
 
 if [ -e "$file_or_directory" ]; then

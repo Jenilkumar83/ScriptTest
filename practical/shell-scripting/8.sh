@@ -5,22 +5,22 @@ if [ "$#" -eq 0 ]; then
     exit 1
 fi
 
-for file_or_directory in "$@"; do
+for file_or_dir in "$@"; do
 
-    if [ -e "$file_or_directory" ]; then
-
-        if [ -f "$file_or_directory" ]; then
-            echo "$file_or_directory is a regular file."
-
-        elif [ -d "$file_or_directory" ]; then
-            echo "$file_or_directory is a directory."
-
+    if [ -e "$file_or_dir" ]; then
+        if [ -f "$file_or_dir" ]; then
+            echo "$file_or_dir is a regular file."
+        elif [ -d "$file_or_dir" ]; then
+            echo "$file_or_dir is a directory."
         else
-            echo "$file_or_directory is another type of file."
+            echo "$file_or_dir is another type of file."
         fi
 
-        ls -l "$file_or_directory"
+        ls -l "$file_or_dir"
+        echo "---------------------------"
     else
-        echo "$file_or_directory does not exist."
+        echo "$file_or_dir does not exist."
+        echo "---------------------------"
     fi
 done
+

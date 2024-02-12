@@ -1,25 +1,25 @@
 #!/bin/bash
 
-if [ "$#" -eq 0 ]; then
-    echo "Usage: $0 <file_or_directory>"
-    exit 1
-fi
+if [ "$#" -eq 1 ]; then
+    file_or_dir="$1"
 
-file_or_directory="$1"
+    if [ -e "$file_or_dir" ]; then
 
-if [ -e "$file_or_directory" ]; then
+        if [ -f "$file_or_dir" ]; then
+            file_type="Regular File"
+        elif [ -d "$file_or_dir" ]; then
+            file_type="Directory"
+        else
+            file_type="Other Type"
+        fi
 
-    if [ -f "$file_or_directory" ]; then
-        echo "$file_or_directory is a regular file."
+        echo "File/Directory Type: $file_type"
 
-    elif [ -d "$file_or_directory" ]; then
-        echo "$file_or_directory is a directory."
-
+        ls -l "$file_or_dir"
     else
-        echo "$file_or_directory is another type of file."
+        echo "Error: The specified file or directory does not exist."
     fi
-
-    ls -l "$file_or_directory"
 else
-    echo "$file_or_directory does not exist."
+    echo "Usage: $0 <file_or_directory>"
 fi
+
