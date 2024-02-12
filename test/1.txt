@@ -1,8 +1,0 @@
-1. /home/ubuntu/file_name
-2.
-  1.gujarati
-  2. maths
-  3. exit
-  4.invalid option
-3.name = abc 
-  number = 123
