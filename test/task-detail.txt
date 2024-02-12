@@ -1,0 +1,13 @@
+1./home/einfochips/
+  check file/dir either regular, dir or does not exist
+
+2.menu
+ 1.hostname
+ 2.uptime
+ 3.pwd
+ 4.exit
+exit with goodbye message
+
+3.name=abc
+  number=123
+take user input's and check cases correctly
